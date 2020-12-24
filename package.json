@@ -1,0 +1,23 @@
+{
+  "name": "react-usestateref",
+  "version": "1.0.0",
+  "description": "useRef and UseState together!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": ">16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aminadav/react-useRefState.git"
+  },
+  "keywords": [],
+  "author": "Aminadav Glickshtein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aminadav/react-useRefState/issues"
+  },
+  "homepage": "https://github.com/Aminadav/react-useRefState#readme"
+}
