@@ -1,6 +1,6 @@
 {
   "name": "react-usestateref",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "useRef and UseState together!",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/Aminadav/react-useRefState.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "hooks",
+    "useState",
+    "useRef"
+  ],
   "author": "Aminadav Glickshtein",
   "license": "ISC",
   "bugs": {

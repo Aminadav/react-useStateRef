@@ -1,7 +1,19 @@
 # react-useStateref
 useRef and UseState together!
 
-Inspiration:
+How to use
+
+```
+npm i react-usestateref
+
+function MyComponent(){
+  var useStateRef=require('reaact-usestateref')
+  var [state,setState,ref]=useStateRef(0)
+  // ref.current will always have the latest state  
+}
+``
+
+## Motivation:
 
 Many StackOverflow questions that people struggling to get the current state
 
@@ -20,24 +32,25 @@ Using `useRef`, can solve it because it have always one value. But when you upda
 See the example code:
 
 ```js
-function Hello(){
-	var [counter,setCounter]=useState(0)
-	function increment(){
-			setCount(counter+1)
-			alert(counter) // will show 0 since the state not updated yet.			
-	}
-	useEffect(()=>{
-		alert(counter) // Whatever is the current state. It always alert 0
-		return ()=>{
-				alert(counter) // On unmount it still alert 0, even if you called increment many times.
-		}
-	},[])
-	return <div>
-					Current number: {counter}
-					<button onClick={increment}>
-						Increment
-					</button>
-				</div>
+function MyComponent(){
+  var [counter,setCounter]=useState(0)
+  function increment(){
+    setCount(counter+1)
+    alert(counter) // will show 0 since the state not updated yet.			
+  }
+  useEffect(()=>{
+    alert(counter) // Whatever is the current state. It always alert 0
+    return ()=>{
+        alert(counter) // On unmount it still alert 0, even if you called increment many times.
+    }
+  },[])
+  return (
+  <div>
+    Current number: {counter}
+    <button onClick={increment}>
+      Increment
+    </button>
+  </div>)
 }
 ```
 
@@ -46,29 +59,30 @@ To solve it I created a new hook `useStateRef`
 See it in action:
 
 ```js
-function Hello(){
-	var [counter,setCounter,counterRef]=useStateRef(0)
-	function increment(){
-			setCount(counter+1)
-			alert(counterRef.current) // will show 1
-	}
-	useEffect(()=>{
-		alert(counterRef.current) // Always show the last value
-		return ()=>{
-				alert(counterRef.current) // // Always show the last value
-		}
-	},[])
-	return <div>
-					Current number: {counter}
-					<button onClick={increment}>
-						Increment
-					</button>
-				</div>
+function MyComponent(){
+  var [counter,setCounter,counterRef]=useStateRef(0)
+  function increment(){
+    setCount(counter+1)
+    alert(counterRef.current) // will show 1
+  }
+  useEffect(()=>{
+    alert(counterRef.current) // Always show the last value
+    return ()=>{
+        alert(counterRef.current) // // Always show the last value
+    }
+  },[])
+  return (
+  <div>
+    Current number: {counter}
+    <button onClick={increment}>
+      Increment
+    </button>
+  </div>)
 }
 ```
 
 It's fully support the `useState` API, so you can change your `useState` to `useStateRef` and it will not break your app.
 
-# Contribution
+##Contribution
 
 I'm open to your contribution. Better documentation or whatever your like. Just open a PR
