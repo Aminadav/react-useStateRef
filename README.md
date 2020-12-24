@@ -11,7 +11,7 @@ function MyComponent(){
   var [state,setState,ref]=useStateRef(0)
   // ref.current will always have the latest state  
 }
-``
+```
 
 ## Motivation:
 
