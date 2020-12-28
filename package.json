@@ -1,10 +1,10 @@
 {
   "name": "react-usestateref",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "useRef and UseState together!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm version patch && git add . && git commit && git push && npm publish"
   },
   "peerDependencies": {
     "react": ">16.0.0"
