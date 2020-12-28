@@ -1,11 +1,18 @@
 # react-useStateref
+
+<img src="https://img.shields.io/static/v1?logo=npm&message=react-usestateref">
+
 useRef and UseState together!
 
-How to use
+## How to use
 
+### Installation
+
+```shell
+$ npm i react-usestateref
 ```
-npm i react-usestateref
 
+```javascript
 function MyComponent(){
   var useStateRef=require('reaact-usestateref')
   var [state,setState,ref]=useStateRef(0)
@@ -83,6 +90,8 @@ function MyComponent(){
 
 It's fully support the `useState` API, so you can change your `useState` to `useStateRef` and it will not break your app.
 
-##Contribution
+## Contribution
 
-I'm open to your contribution. Better documentation or whatever your like. Just open a PR
+- Star & fork this project.
+- I'm open to your contribution.
+- Better documentation or whatever your like. Just open a PR
