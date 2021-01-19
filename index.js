@@ -1,15 +1,11 @@
 //@ts-check
-var react = require('react')
-module.exports = function UseStateRef(defaultValue) {
-	var [state, setState] = react.useState(defaultValue)
-	var ref = react.useRef(defaultValue)
-	ref.current = state
-	return [
-		state,
-		function (newValue) {
-			ref.current = newValue
-			return setState(newValue)
-		},
-		ref
-	]
-}
+var React = require('react');
+
+module.exports = function useStateRef(defaultValue) {
+    var [state, setState] = React.useState(defaultValue);
+
+    var ref = React.useRef(defaultValue);
+    React.useEffect(() => (ref.current = state), [state]);  
+
+    return [ state, setState, ref ];
+};
