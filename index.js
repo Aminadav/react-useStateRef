@@ -1,4 +1,4 @@
-//@ts-check
+// @ts-check
 var react = require('react')
 module.exports = function UseStateRef(defaultValue) {
 	var [state, setState] = react.useState(defaultValue)
