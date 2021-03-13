@@ -20,6 +20,8 @@ function MyComponent(){
 }
 ```
 
+As you can see it's 100% backward compatible. You can relace all your `useState` with this import, and you will always have the latest state.
+
 ## Motivation:
 
 Many StackOverflow questions that people struggling to get the current state
