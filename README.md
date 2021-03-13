@@ -13,9 +13,9 @@ $ npm i react-usestateref
 ```
 
 ```javascript
+import useState from 'react-usestateref'
 function MyComponent(){
-  var useStateRef=require('reaact-usestateref')
-  var [state,setState,ref]=useStateRef(0)
+  var [state,setState,ref]=useState(0)
   // ref.current will always have the latest state  
 }
 ```
