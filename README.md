@@ -1,6 +1,6 @@
 # react-useStateref
 
-<img src="https://img.shields.io/static/v1?logo=npm&message=react-usestateref">
+<img src="https://img.shields.io/static/v1?logo=npm&message=react-usestateRef">
 
 useRef and UseState together!
 
@@ -13,12 +13,14 @@ $ npm i react-usestateref
 ```
 
 ```javascript
+import useState from 'react-usestateref'
 function MyComponent(){
-  var useStateRef=require('reaact-usestateref')
-  var [state,setState,ref]=useStateRef(0)
+  var [state,setState,ref]=useState(0)
   // ref.current will always have the latest state  
 }
 ```
+
+As you can see it's 100% backward compatible. You can replace all your `useState` with this import and you will always have the latest state.
 
 ## Motivation:
 
