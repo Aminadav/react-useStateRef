@@ -1,6 +1,6 @@
 # react-useStateref
 
-<img src="https://img.shields.io/static/v1?logo=npm&message=react-usestateref">
+<img src="https://img.shields.io/static/v1?logo=npm&message=react-usestateRef">
 
 useRef and UseState together!
 
