@@ -1,6 +1,6 @@
 # react-useStateRef
 
-<a href="https://www.npmjs.com/package/react-usestateref"><img src="https://img.shields.io/static/v1?logo=npm&message=react-usestateRef"></a>
+<a href="https://www.npmjs.com/package/react-usestateref"><img src="https://img.shields.io/static/v1?logo=npm&message=react-useStateRef"></a>
 
 useRef and UseState together!
 
