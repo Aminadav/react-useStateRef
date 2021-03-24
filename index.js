@@ -1,16 +1,16 @@
 // @ts-check
-var React = require('react');
+var React = require('react')
 
 module.exports = function useStateRef(defaultValue) {
-  var [state, setState] = React.useState(defaultValue);
-  var ref = React.useRef(state);
+  var [state, setState] = React.useState(defaultValue)
+  var ref = React.useRef(state)
 
   var dispatch = React.useCallback(function(val) {
     ref.current = typeof val === "function" ?
-    val(ref.current) : val;
+    val(ref.current) : val
 
-    setState(ref.current);
+    setState(ref.current)
   }, []);
 
-  return [state, dispatch, ref];
-};
+  return [state, dispatch, ref]
+}
