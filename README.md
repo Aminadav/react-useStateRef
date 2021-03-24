@@ -68,8 +68,9 @@ To solve it I created a new hook `useStateRef`
 See it in action:
 
 ```js
+import useState from 'react-usestateref' // see this line
 function MyComponent(){
-  var [counter,setCounter,counterRef]=useStateRef(0)
+  var [counter,setCounter,counterRef]=useState(0)
   function increment(){
     setCount(counter+1)
     alert(counterRef.current) // will show 1
