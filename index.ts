@@ -16,7 +16,7 @@ const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)) => {
   const [state, setState] = useState(initialState);
   const ref = useRef(state);
 
-  const dispatch: typeof setState = useCallback(setStateAction => {
+  const dispatch: typeof setState = useCallback((setStateAction:any) => {
     ref.current = isFunction(setStateAction) ? setStateAction(ref.current) : setStateAction;
 
     setState(ref.current);
