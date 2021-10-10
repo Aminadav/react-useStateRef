@@ -2,9 +2,13 @@
   "name": "react-usestateref",
   "version": "1.0.4",
   "description": "useRef and UseState together!",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "deploy": "npm version patch && git add . && git commit && git push && npm publish"
+    "build": "rimraf dist && tsc",
+    "deploy": "npm run build && npm version patch && git push && npm publish"
   },
   "peerDependencies": {
     "react": ">16.0.0"
@@ -24,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/Aminadav/react-useRefState/issues"
   },
-  "homepage": "https://github.com/Aminadav/react-useRefState#readme"
+  "homepage": "https://github.com/Aminadav/react-useRefState#readme",
+  "devDependencies": {
+    "@types/react": "^17.0.16",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  }
 }
