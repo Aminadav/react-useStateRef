@@ -44,7 +44,7 @@ See the example code:
 function MyComponent(){
   var [counter,setCounter]=useState(0)
   function increment(){
-    setCount(counter+1)
+    setCounter(counter+1)
     alert(counter) // will show 0 since the state not updated yet.			
   }
   useEffect(()=>{
@@ -72,7 +72,7 @@ import useState from 'react-usestateref' // see this line
 function MyComponent(){
   var [counter,setCounter,counterRef]=useState(0)
   function increment(){
-    setCount(counter+1)
+    setCounter(counter+1)
     alert(counterRef.current) // will show 1
   }
   useEffect(()=>{
