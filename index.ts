@@ -13,7 +13,7 @@ type UseStateRef = {
   <S = undefined>(): UseStateRefValue<S>;
 };
 
-const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)): UseStateRefValue<S> => {
+const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)) => {
   const [state, setState] = useState(initialState);
   const ref = useRef(state);
 
@@ -23,7 +23,7 @@ const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)): UseStateRefV
     setState(ref.current);
   }, []);
 
-  return [state, dispatch, ref];
+  return [state, dispatch, ref] as UseStateRefValue<S>;
 };
 
 export = useStateRef;
