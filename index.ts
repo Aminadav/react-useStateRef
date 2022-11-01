@@ -7,12 +7,13 @@ type ReadOnlyRefObject<T> = {
   readonly current: T;
 };
 
+type UseStateRefValue<T> = [T, Dispatch<SetStateAction<T>>, ReadOnlyRefObject<T>];
 type UseStateRef = {
-  <S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>, ReadOnlyRefObject<S>];
-  <S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>, ReadOnlyRefObject<S | undefined>];
+  <S>(initialState: S | (() => S)): UseStateRefValue<S>;
+  <S = undefined>(): UseStateRefValue<S>;
 };
 
-const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)) => {
+const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)): UseStateRefValue<S> => {
   const [state, setState] = useState(initialState);
   const ref = useRef(state);
 
