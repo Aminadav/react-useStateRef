@@ -3,16 +3,16 @@ import { useCallback, useRef, useState, SetStateAction, Dispatch } from "react";
 const isFunction = <S>(setStateAction: SetStateAction<S>): setStateAction is (prevState: S) => S =>
   typeof setStateAction === "function";
 
-type ReadOnlyRefObject<T> = {
+export type ReadOnlyRefObject<T> = {
   readonly current: T;
 };
 
-type UseStateRef = {
+export type UseStateRef = {
   <S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>, ReadOnlyRefObject<S>];
   <S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>, ReadOnlyRefObject<S | undefined>];
 };
 
-const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)) => {
+export const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)) => {
   const [state, setState] = useState(initialState);
   const ref = useRef(state);
 
@@ -25,4 +25,4 @@ const useStateRef: UseStateRef = <S>(initialState?: S | (() => S)) => {
   return [state, dispatch, ref];
 };
 
-export = useStateRef;
+export default useStateRef;
