@@ -1,6 +1,6 @@
 {
   "name": "react-usestateref",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "useRef and UseState together!",
   "main": "dist/index.js",
   "files": [

@@ -98,3 +98,8 @@ It's fully support the `useState` API, so you can change your `useState` to `use
 - Star & fork this project.
 - I'm open to your contribution.
 - Better documentation or whatever your like. Just open a PR
+
+## Other innovations by cretors:
+
+- [ביחד ננצח](https://yachad.app)
+- [Webpage Screenshot](https://chromewebstore.google.com/detail/webpage-screenshot-entire/akgpcdalpfphjmfifkmfbpdmgdmeeaeo)
