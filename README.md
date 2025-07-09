@@ -101,5 +101,5 @@ It's fully support the `useState` API, so you can change your `useState` to `use
 
 ## Other innovations by cretors:
 
-- [ביחד ננצח](https://yachad.app)
 - [Webpage Screenshot](https://chromewebstore.google.com/detail/webpage-screenshot-entire/akgpcdalpfphjmfifkmfbpdmgdmeeaeo)
+- [ערוץ מבניד](https://xn----2hcgfw2apl2a2a.boti.bot/)
